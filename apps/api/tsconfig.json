@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "../../dist/apps/api"
+  },
+  "include": ["src/**/*.ts"],
+  "references": [{ "path": "../../libs/core" }, { "path": "../../libs/shared" }]
+}

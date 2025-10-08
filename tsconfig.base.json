@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "baseUrl": ".",
+    "types": ["bun-types"],
+    "paths": {
+      "@api/*": ["apps/api/src/*"],
+      "@core/*": ["libs/core/src/*"],
+      "@shared/*": ["libs/shared/*"]
+    },
+    "ignoreDeprecations": "5.0"
+  }
+}

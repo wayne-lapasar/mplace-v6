@@ -1,7 +1,5 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
-  }
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [{ "path": "./apps/api" }, { "path": "./libs/core" }, { "path": "./libs/shared" }]
 }
