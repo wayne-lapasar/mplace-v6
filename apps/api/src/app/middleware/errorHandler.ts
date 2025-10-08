@@ -2,7 +2,9 @@ import type { Context } from 'hono'
 
 import type { AppContainer } from '../../bootstrap/container'
 
-export function errorHandler(container: AppContainer) {
+export function errorHandler(
+  container: AppContainer
+): (error: Error, context: Context) => Response {
   return (error: Error, context: Context) => {
     const requestId = context.get('requestId') as string | undefined
 
