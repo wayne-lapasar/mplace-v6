@@ -1,0 +1,24 @@
+{
+  "register": {
+    "success": "Pengguna berjaya didaftarkan",
+    "emailExists": "Alamat e-mel sudah didaftarkan",
+    "invalidEmail": "Alamat e-mel tidak sah",
+    "passwordTooShort": "Kata laluan mestilah sekurang-kurangnya 8 aksara"
+  },
+  "login": {
+    "success": "Log masuk berjaya",
+    "invalidCredentials": "E-mel atau kata laluan tidak sah",
+    "accountLocked": "Akaun anda telah dikunci",
+    "emailNotVerified": "Sila sahkan alamat e-mel anda"
+  },
+  "profile": {
+    "updated": "Profil berjaya dikemaskini",
+    "notFound": "Pengguna tidak dijumpai",
+    "invalidData": "Data profil tidak sah"
+  },
+  "errors": {
+    "userNotFound": "Pengguna dengan ID {userId} tidak dijumpai",
+    "duplicateEmail": "E-mel {email} sudah didaftarkan",
+    "invalidCredentials": "E-mel atau kata laluan tidak sah"
+  }
+}

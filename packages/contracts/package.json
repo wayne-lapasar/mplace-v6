@@ -1,0 +1,10 @@
+{
+  "name": "@lapasar/contracts",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "dependencies": {
+    "@lapasar/shared-kernel": "workspace:*",
+    "zod": "^4.0.0"
+  }
+}

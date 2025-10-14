@@ -1,0 +1,24 @@
+{
+  "register": {
+    "success": "User registered successfully",
+    "emailExists": "Email address is already registered",
+    "invalidEmail": "Invalid email address",
+    "passwordTooShort": "Password must be at least 8 characters"
+  },
+  "login": {
+    "success": "Login successful",
+    "invalidCredentials": "Invalid email or password",
+    "accountLocked": "Your account has been locked",
+    "emailNotVerified": "Please verify your email address"
+  },
+  "profile": {
+    "updated": "Profile updated successfully",
+    "notFound": "User not found",
+    "invalidData": "Invalid profile data"
+  },
+  "errors": {
+    "userNotFound": "User with ID {userId} not found",
+    "duplicateEmail": "Email {email} is already registered",
+    "invalidCredentials": "Invalid email or password"
+  }
+}

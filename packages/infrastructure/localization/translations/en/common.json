@@ -1,0 +1,30 @@
+{
+  "app": {
+    "name": "Lapasar B2B eCommerce Platform",
+    "welcome": "Welcome to Lapasar"
+  },
+  "validation": {
+    "required": "{field} is required",
+    "invalid": "{field} is invalid",
+    "min": "{field} must be at least {min} characters",
+    "max": "{field} must not exceed {max} characters",
+    "email": "Invalid email address",
+    "password": {
+      "tooShort": "Password must be at least {min} characters",
+      "tooWeak": "Password is too weak"
+    }
+  },
+  "common": {
+    "success": "Operation successful",
+    "error": "An error occurred",
+    "notFound": "Resource not found",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "conflict": "Resource already exists"
+  },
+  "pagination": {
+    "page": "Page {page} of {total}",
+    "items": "{count} item",
+    "items_plural": "{count} items"
+  }
+}

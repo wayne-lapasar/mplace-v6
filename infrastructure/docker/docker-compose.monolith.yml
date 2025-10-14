@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  # * MongoDB
+  mongo:
+    image: mongo:7
+    container_name: lapasar-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: lapasar-corp
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - lapasar-network
+
+  # * Monolith Application
+  monolith:
+    build:
+      context: ../../
+      dockerfile: apps/monolith/Dockerfile
+    container_name: lapasar-monolith
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOST: 0.0.0.0
+      MONGODB_URI: mongodb://mongo:27017/lapasar-corp
+      MONGODB_DB_NAME: lapasar-corp
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRES_IN: 7d
+      ARGON2_MEMORY_SIZE: 19456
+      ARGON2_ITERATIONS: 2
+      ARGON2_PARALLELISM: 1
+      LOG_LEVEL: info
+    depends_on:
+      - mongo
+    networks:
+      - lapasar-network
+
+volumes:
+  mongo-data:
+
+networks:
+  lapasar-network:
+    driver: bridge
