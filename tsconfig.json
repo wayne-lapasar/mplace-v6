@@ -1,7 +1,9 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "strict": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
-  }
+    "rootDir": ".",
+    "outDir": "./dist"
+  },
+  "include": ["apps/**/*", "packages/**/*", "scripts/**/*", "tests/**/*"],
+  "exclude": ["node_modules", "dist", "**/node_modules"]
 }

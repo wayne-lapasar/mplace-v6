@@ -1,0 +1,30 @@
+{
+  "app": {
+    "name": "Platform eCommerce B2B Lapasar",
+    "welcome": "Selamat datang ke Lapasar"
+  },
+  "validation": {
+    "required": "{field} diperlukan",
+    "invalid": "{field} tidak sah",
+    "min": "{field} mestilah sekurang-kurangnya {min} aksara",
+    "max": "{field} tidak boleh melebihi {max} aksara",
+    "email": "Alamat e-mel tidak sah",
+    "password": {
+      "tooShort": "Kata laluan mestilah sekurang-kurangnya {min} aksara",
+      "tooWeak": "Kata laluan terlalu lemah"
+    }
+  },
+  "common": {
+    "success": "Operasi berjaya",
+    "error": "Ralat berlaku",
+    "notFound": "Sumber tidak dijumpai",
+    "unauthorized": "Akses tidak dibenarkan",
+    "forbidden": "Akses dilarang",
+    "conflict": "Sumber sudah wujud"
+  },
+  "pagination": {
+    "page": "Halaman {page} daripada {total}",
+    "items": "{count} item",
+    "items_plural": "{count} item"
+  }
+}

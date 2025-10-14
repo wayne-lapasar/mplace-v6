@@ -1,0 +1,13 @@
+{
+  "name": "@lapasar/users-domain",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "dependencies": {
+    "@lapasar/shared-kernel": "workspace:*",
+    "@lapasar/infrastructure": "workspace:*",
+    "@lapasar/contracts": "workspace:*",
+    "zod": "^4.0.0",
+    "mongodb": "6.20"
+  }
+}

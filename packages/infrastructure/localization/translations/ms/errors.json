@@ -1,0 +1,18 @@
+{
+  "system": {
+    "internalError": "Ralat dalaman pelayan",
+    "serviceUnavailable": "Perkhidmatan tidak tersedia buat masa ini",
+    "timeout": "Tamat masa permintaan"
+  },
+  "validation": {
+    "invalidInput": "Input tidak sah diberikan",
+    "missingField": "Medan yang diperlukan hilang: {field}",
+    "invalidFormat": "Format tidak sah untuk {field}"
+  },
+  "auth": {
+    "invalidToken": "Token tidak sah atau tamat tempoh",
+    "unauthorized": "Anda tidak dibenarkan mengakses sumber ini",
+    "forbidden": "Anda tidak mempunyai kebenaran untuk melakukan tindakan ini",
+    "sessionExpired": "Sesi anda telah tamat tempoh, sila log masuk semula"
+  }
+}

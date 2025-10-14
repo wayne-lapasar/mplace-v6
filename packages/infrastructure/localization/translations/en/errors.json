@@ -1,0 +1,18 @@
+{
+  "system": {
+    "internalError": "Internal server error",
+    "serviceUnavailable": "Service temporarily unavailable",
+    "timeout": "Request timeout"
+  },
+  "validation": {
+    "invalidInput": "Invalid input provided",
+    "missingField": "Required field is missing: {field}",
+    "invalidFormat": "Invalid format for {field}"
+  },
+  "auth": {
+    "invalidToken": "Invalid or expired token",
+    "unauthorized": "You are not authorized to access this resource",
+    "forbidden": "You do not have permission to perform this action",
+    "sessionExpired": "Your session has expired, please login again"
+  }
+}
