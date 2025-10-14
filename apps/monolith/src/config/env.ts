@@ -12,6 +12,9 @@ const EnvSchema = z.object({
   MONGODB_URI: z.string().url(),
   MONGODB_DB_NAME: z.string().default('lapasar-corp'),
 
+  // * Cache
+  REDIS_URL: z.string().url().optional(),
+
   // * JWT
   JWT_SECRET: z.string().min(32),
   JWT_EXPIRES_IN: z.string().default('7d'),
@@ -31,6 +34,12 @@ const EnvSchema = z.object({
 
   // * Internationalization
   DEFAULT_LOCALE: z.enum(['en', 'ms']).default('en'),
+
+  // * Rate Limiting
+  RATE_LIMIT_ENABLED: z.coerce.boolean().default(true),
+  RATE_LIMIT_WINDOW_MS: z.coerce.number().default(60000), // * 1 minute
+  RATE_LIMIT_MAX_REQUESTS: z.coerce.number().default(100), // * 100 requests per minute
+  RATE_LIMIT_SKIP_SUCCESSFUL_REQUESTS: z.coerce.boolean().default(false),
 });
 
 export type Env = z.infer<typeof EnvSchema>;

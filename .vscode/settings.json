@@ -18,6 +18,7 @@
     "Loggable",
     "Melayu",
     "sendgrid",
+    "setex",
     "tsparser"
   ]
 }

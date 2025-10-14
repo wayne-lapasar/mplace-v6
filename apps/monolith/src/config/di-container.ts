@@ -4,17 +4,21 @@ import type { Db } from 'mongodb';
 import { join } from 'node:path';
 
 import {
+  BunRedisCache,
   ConsoleTransport,
   FileTransport,
   HealthCheckService,
   I18nService,
+  type ICache,
   type IEventBus,
+  InMemoryCache,
   InMemoryEventBus,
   JWTService,
   type LoggerConfig,
   MongoDBClient,
   MongoDBTransport,
   PasswordService,
+  RateLimiterService,
   SmartLogger,
 } from '@lapasar/infrastructure';
 import {
@@ -32,6 +36,8 @@ export class DIContainer {
   readonly logger: SmartLogger;
   readonly mongoClient: MongoDBClient;
   readonly eventBus: IEventBus;
+  readonly cache: ICache;
+  readonly rateLimiter: RateLimiterService;
   readonly passwordService: PasswordService;
   readonly jwtService: JWTService;
   readonly healthCheckService: HealthCheckService;
@@ -116,6 +122,21 @@ export class DIContainer {
 
     // * Initialize i18n service
     this.i18nService = new I18nService(env.DEFAULT_LOCALE);
+
+    // * Initialize cache (BunRedisCache if REDIS_URL provided, otherwise InMemoryCache)
+    if (env.REDIS_URL) {
+      this.logger.info('Using BunRedisCache for caching and rate limiting');
+      this.cache = new BunRedisCache(env.REDIS_URL);
+    } else {
+      this.logger.info('Using InMemoryCache for caching and rate limiting (development only)');
+      this.cache = new InMemoryCache();
+    }
+
+    // * Initialize rate limiter
+    this.rateLimiter = new RateLimiterService(this.cache, {
+      maxRequests: env.RATE_LIMIT_MAX_REQUESTS,
+      windowMs: env.RATE_LIMIT_WINDOW_MS,
+    });
   }
 
   async initialize(): Promise<void> {

@@ -13,6 +13,7 @@ This directory contains comprehensive documentation for the Lapasar B2B eCommerc
 - **[I18N_IMPLEMENTATION.md](./I18N_IMPLEMENTATION.md)** - Complete implementation summary of the internationalization system
 - **[I18N_GUIDE.md](./I18N_GUIDE.md)** - Developer guide for using the i18n system
 - **[LOGGING_DESIGN.md](./LOGGING_DESIGN.md)** - Smart logging system design and usage guide
+- **[RATE_LIMITING.md](./RATE_LIMITING.md)** - Rate limiting system with Bun's Redis client
 
 ## Quick Links
 

@@ -14,6 +14,7 @@ export * from './events/in-memory-event-bus';
 export * from './events/rabbitmq-event-bus';
 
 // * Cache
+export * from './cache/bun-redis-cache';
 export * from './cache/cache.port';
 export * from './cache/in-memory-cache';
 export * from './cache/redis-cache';
@@ -37,3 +38,6 @@ export * from './validation/zod-validator';
 
 // * Localization
 export * from './localization';
+
+// * Rate Limiting
+export * from './rate-limiting';
